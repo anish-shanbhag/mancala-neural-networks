@@ -1,3 +1,4 @@
 __pycache__
-log.json
-weights_step*.h5f
+.vscode
+dql-networks
+neuroevolution-networks
