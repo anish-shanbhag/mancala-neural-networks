@@ -110,7 +110,7 @@ def genetic_algorithm(layer_size, layer_size_2, layer_size_3,
                 move = i
                 move_confidence = outputs[move]
 
-          def resolve_move(board):
+          def resolve_move(board, pie_rule_available):
             if move == 6:
               board = np.concatenate([board[7:14], board[0:7]])
               return False
@@ -135,7 +135,7 @@ def genetic_algorithm(layer_size, layer_size_2, layer_size_3,
                   board[12 - pocket] = 0
                 return False
             
-          free_move = resolve_move(board)
+          free_move = resolve_move(board, pie_rule_available)
           if free_move:
             continue
           else:
